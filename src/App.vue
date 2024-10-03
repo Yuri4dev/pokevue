@@ -1,13 +1,12 @@
-<script setup lang="ts">
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  document.documentElement.classList.add('dark')
-})
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <RouterView />
 </template>
 
-<style></style>
+<style>
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+}
+</style>
