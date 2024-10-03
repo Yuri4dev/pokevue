@@ -8,6 +8,7 @@ export interface PokemonDetails {
 export interface RawPokemon {
   id: number
   name: string
+  favorite: boolean
   sprites: {
     front_default: string
     other: {

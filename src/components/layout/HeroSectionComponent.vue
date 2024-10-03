@@ -19,18 +19,16 @@ const searchPokemon = (): void => {
 </script>
 
 <template>
-  <section class="bg-gray-50 rounded-md mb-5">
+  <section class="bg-gray-50 dark:bg-slate-700 rounded-md mb-5">
     <div class="p-8 md:p-12 lg:px-16">
       <div class="mx-auto max-w-lg text-center">
-        <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">Pokédex</h2>
+        <h2 class="text-2xl font-bold md:text-3xl">Pokédex</h2>
 
-        <p class="text-gray-500 mt-4">Use the advanced search to find Pokémon by name or number!</p>
+        <p class="mt-4">Use the advanced search to find Pokémon by name or number!</p>
       </div>
 
       <form @submit.prevent="searchPokemon" class="mx-auto mt-8 max-w-xl">
-        <label
-          for="default-search"
-          class="text-sm font-medium text-gray-900 sr-only dark:text-white"
+        <label for="default-search" class="text-sm font-medium sr-only dark:text-white"
           >Search</label
         >
         <div class="relative">
@@ -55,7 +53,7 @@ const searchPokemon = (): void => {
             type="search"
             v-model="searchValue"
             id="default-search"
-            class="lowercase block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+            class="lowercase block w-full p-4 ps-10 text-sm border dark:bg-gray-800 border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
             placeholder="Search a pokémon"
           />
           <button

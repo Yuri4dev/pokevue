@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import PokemonCard from '@/components/PokemonCard.vue'
 import { useFetchPokemon } from '@/composables/useFetchPokemons'
-import PokemonModal from './PokemonModal.vue'
 import { usePokemonStore } from '@/stores/usePokemonStore'
 import { storeToRefs } from 'pinia'
 import { onMounted, ref } from 'vue'
@@ -18,19 +17,6 @@ const { pokemons, loading, error } = storeToRefs(store)
 onMounted(async () => {
   await loadPokemons()
 })
-
-const isModalOpen = ref<boolean>(false)
-const selectedPokemon = ref<RawPokemon | null>(null)
-
-const openModal = (pokemon: RawPokemon) => {
-  selectedPokemon.value = pokemon
-  isModalOpen.value = true
-}
-
-const closeModal = () => {
-  isModalOpen.value = false
-  selectedPokemon.value = null
-}
 
 const getMorePokemon = async () => {
   await loadMorePokemons()
@@ -63,12 +49,7 @@ const getMorePokemon = async () => {
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 translate-y-4"
     >
-      <PokemonCard
-        v-for="(pokemon, index) in pokemons"
-        :key="index"
-        :pokemon="pokemon"
-        @click="openModal(pokemon)"
-      />
+      <PokemonCard v-for="(pokemon, index) in pokemons" :key="index" :pokemon="pokemon" />
     </transition-group>
 
     <button
@@ -79,11 +60,4 @@ const getMorePokemon = async () => {
       Carregar mais Pokémon
     </button>
   </div>
-
-  <PokemonModal
-    v-if="selectedPokemon"
-    :isOpen="isModalOpen"
-    :pokemon="selectedPokemon"
-    @close="closeModal"
-  />
 </template>

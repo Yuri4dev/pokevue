@@ -30,9 +30,9 @@ const clearFilter = (): void => {
       <summary
         class="w-max flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600"
       >
-        <span class="text-sm font-medium"> Filters </span>
+        <span class="dark:text-gray-300 text-sm font-medium"> Filters </span>
 
-        <span class="transition group-open:-rotate-180">
+        <span class="transition group-open:-rotate-180 dark:text-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
