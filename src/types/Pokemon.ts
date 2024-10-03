@@ -23,6 +23,7 @@ export interface RawPokemon {
       url: string
     }
   }>
+  image: string
 }
 
 export interface PokemonType {
