@@ -25,7 +25,6 @@ const selectedPokemon = ref<RawPokemon | null>(null)
 const openModal = (pokemon: RawPokemon) => {
   selectedPokemon.value = pokemon
   isModalOpen.value = true
-  console.log(pokemon)
 }
 
 const closeModal = () => {

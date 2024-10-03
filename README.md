@@ -1,45 +1,37 @@
-# pokevue
+# Pokémon Manager
 
-This template should help get you started developing with Vue 3 in Vite.
+![Pokémon Manager Logo](https://example.com/logo.png) <!-- Substitua pelo URL do seu logo -->
 
-## Recommended IDE Setup
+## Descrição
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+O **Pokémon Manager** é uma aplicação web construída com **Vue.js** e **Pinia** que permite aos usuários visualizar, filtrar e gerenciar informações sobre Pokémon. Com uma interface amigável e responsiva, os usuários podem explorar detalhes dos Pokémon e interagir com um sistema de modais para visualizar informações detalhadas.
 
-## Type Support for `.vue` Imports in TS
+## Funcionalidades
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Listagem de Pokémon**: Visualize uma lista completa de Pokémon com imagens e tipos.
+- **Modal Detalhado**: Clique em um Pokémon para abrir um modal com informações adicionais.
+- **Carregar Mais Pokémon**: Acesse mais Pokémon com um simples clique.
+- **Filtros Dinâmicos**: Filtre Pokémon por tipos e outras características.
 
-## Customize configuration
+## Tecnologias Usadas
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Frontend**:
+  - [Vue.js](https://vuejs.org/) - Framework JavaScript para a construção da interface.
+  - [Pinia](https://pinia.vuejs.org/) - Gerenciador de estado para Vue.
+- **APIs**:
+  - [PokéAPI](https://pokeapi.co/) - API pública utilizada para obter dados de Pokémon.
 
-## Project Setup
+## Estrutura do Projeto
 
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-pnpm test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
+```plaintext
+└── src
+    ├── assets             # Recursos estáticos (imagens, fontes, etc.)
+    ├── components         # Componentes Vue
+    ├── composables        # Composables Vue
+    ├── services           # Serviços para chamadas API
+    ├── stores             # Stores do Pinia
+    ├── types              # Tipos TypeScript
+    ├── utils              # Funções utilitárias
+    ├── views              # Visões ou páginas da aplicação
+    └── App.vue            # Componente raiz
 ```
